@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+  padding: 0; 
+  margin: 0; 
+}
+body {
+  height: auto;
+  background-color: #0079BF;
+ }
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.header {
+  height: 55px;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+  background-color: #0067A3;
+  padding: 20px;
+}
+.header-title {
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+}
+
+.header-user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+.user-menu {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+}
+.avatar {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+}
+.arrow {
+  cursor: pointer;
+  }
+ .arrow.rotate {
+    transform: rotate(180deg); 
+  }
+
+.user-info {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 100%;
+}
+.user-info.show {
+  display: flex; 
+  flex-direction: column;
+}
+.rect {
+  width: 11px;
+  height: 11px;
+  margin-left: 85px;
+  margin-bottom: -5.5px;
+}
+.profile {
+  width: 134px;
+  height: 60px;
+  background-color: white;
+  padding-top: 8px;
+  padding-left: 7px;
+  border-radius: 10px;
+}
+.profile-text {
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  margin-top: 4px;
+}
+.profile-text:hover {
+  text-decoration: underline;
+}
+
+
+.cardBacklog {
+  width: 282px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #EBECF0;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-left: 19px;
+  margin-right: 24px;
+}
+
+
+.card-title {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+}
+.card-task {
+  width: 252px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 7px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.add-card {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  margin: 17px 35px 8px 13px;
+  color: #5E6C84;
+  gap: 3px;
+}
+.add-card__plus {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  margin: 17px 35px 8px 0px;
+  color: #5E6C84;
+  gap: 3px;
+}
+.active-card {
+  cursor: pointer;
+  color: #5E6C84;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+.add-card__plus.disabled {
+  cursor: not-allowed; 
+  color: red; 
+  pointer-events: none; 
+  text-decoration: line-through;
+}
+
+.submit {
+  width: 102px;
+  height: 29px;
+  border-radius: 5px;
+  }
+
+
+ input {
+   border: none;
+ }
+
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0079BF;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005f8b;
+}
+
+.dropdown {
+  width: 252px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+.detailPage {
+  margin: 22px 28px 20px 26px;
+  width: 1181px;
+  height: 548px;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+}
+.detailPage-h1 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 22px;
+  margin-left: 28px;
+  }
+  .detailPage-p {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 35px;
+  margin-left: 30px;
+    }
+.x {
+  position: absolute;
+  color: black;
+  background-color: white;
+  top: 0;
+  right: 0;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  min-height: 300px;
+}
+
+
+
+
+
+
+
+  .footer {
+  height: 55px;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%; 
+  background-color: #0067A3;
+  padding: 20px;
+  margin-top: 32px;
+  }
+  .footer-title {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+  }
+  .footer-tasks {
+  display: flex;
+  flex-direction: row; 
+  gap: 36px;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .header {
+      height: 55px;
+      width: 100%; 
+      background-color: #0079BF;
+      padding: 10px;
+      display: flex;
+      }
+    .header-title {
+      display: none;
+    }
+    .header-user {
+      margin-left: auto;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer {
+      display: none;
+    }
+  }
